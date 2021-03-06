@@ -46,6 +46,7 @@ def __brute():                                                     #开始爆破
     for i in j:
         time.sleep(sleep)
         k.type_string(str(i))
+        time.sleep(0.001)                                       #参数1
         k.tap_key(k.enter_key)
     return
 
@@ -181,7 +182,7 @@ END.pack()
 
 b1 = tk.Button(window, text='ok', width=14, height=1, command=start_end)#按钮b1
 b1.pack()
-s = tk.Scale(window, label='select sleep interval', cursor='circle', sliderrelief='raised', sliderlength=50, tickinterval=0.2, bd=5, from_=0, to=1, resolution=0.005, orient=tk.HORIZONTAL, length=400, variable=SLEEP, command=interval)
+s = tk.Scale(window, label='select sleep interval', cursor='circle', sliderrelief='raised', sliderlength=50, tickinterval=0.2, bd=5, from_=0, to=1, resolution=0.001, orient=tk.HORIZONTAL, length=400, variable=SLEEP, command=interval)
 s.pack()                                                                                        #设置sleep间隔滑块
 
           
